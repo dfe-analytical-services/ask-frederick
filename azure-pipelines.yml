@@ -24,9 +24,9 @@ extends:
     appName: ask-frederick
     environments:
     - name: Pre-Production
-      appId: Null
+      appId: none
     - name: Production
-      appId: Null
+      appId: none
     approvers: |
      cameron.race@education.gov.uk
      laura.selby@education.gov.uk
