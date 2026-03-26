@@ -23,9 +23,7 @@ extends:
   parameters:
     appName: ask-frederick
     environments:
-    - name: Pre-Production
-      appId: none
-    - name: Production
+    - name: Staging
       appId: none
     approvers: |
      cameron.race@education.gov.uk
