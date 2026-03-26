@@ -80,7 +80,7 @@ ui <- page_sidebar(
   # Main dynamic content area to prevent layout jumps
   div(
     id = "main-content",
-    style = "min-height: 400px;", # Adjust as needed
+    style = "min-height: 400px;",
     uiOutput("main_ui")
   )
 )

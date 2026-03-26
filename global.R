@@ -17,7 +17,6 @@ db_token <- Sys.getenv("DATABRICKS_TOKEN")
 catalog <- "catalog_40_copper_statistics_services"
 schema <- "ask_frederick"
 
-
 guidance_index <- paste0(
   catalog,
   ".",
