@@ -4,7 +4,7 @@ server <- function(input, output, session) {
       input$chat_mode,
       "guidance" = tagList(
         bslib::card(
-          style = "max-height: 100vh; overflow-y: auto;",
+          style = "max-height: 85vh; overflow-y: auto;",
 
           bslib::card_body(
             shinychat::chat_ui(
@@ -180,6 +180,7 @@ server <- function(input, output, session) {
           "chat",
           "Sorry, there was a problem, this may be because you've hit an API limit for this thread. Please reset the chat."
         )
+        message("Error during vector search: ", e$message)
         return(NULL)
       }
     )
