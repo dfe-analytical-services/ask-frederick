@@ -17,7 +17,10 @@ ui <- page_sidebar(
       )
     )
   ),
-  tags$head(includeHTML("google-analytics.html")),
+  tags$head(
+    shinyjs::useShinyjs(),
+    includeHTML("google-analytics.html")
+  ),
 
   # Logo
   #conditionalPanel(

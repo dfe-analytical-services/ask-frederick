@@ -146,12 +146,31 @@ server <- function(input, output, session) {
     paste(sample(greatness, 1), sample(motivation, 1), sep = "\n")
   })
 
+  observeEvent(input$hype_submit, {
+    # Track hype question in GA
+    hype_input <- paste(input$hype_name, input$hype_goal, sep = " | ")
+    shinyjs::runjs(
+      sprintf(
+        "gtag('event', 'hype_question', {'event_category': 'Chat submission', 'event_label': %s});",
+        jsonlite::toJSON(hype_input)
+      )
+    )
+  })
+
   observeEvent(input$reset_chat, {
     chat_clear("chat")
     chat_append("chat", "Chat has been reset. how can I help?")
   })
 
   observeEvent(input$chat_user_input, {
+    # Track guidance question in GA
+    question_text <- shinyjs::runjs(
+      sprintf(
+        "gtag('event', 'guidance_question', {'event_category': 'Chat submission', 'event_label': %s});",
+        jsonlite::toJSON(input$chat_user_input)
+      )
+    )
+
     if (
       grepl(
         "^what is the meaning of life the universe and everything$",

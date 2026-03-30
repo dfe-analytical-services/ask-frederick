@@ -3,12 +3,14 @@
 library(shiny)
 library(bslib)
 library(shinychat)
+library(shinyjs)
 
 ## LLM
 library(ellmer)
 
 ## API handling
 library(httr2)
+library(jsonlite)
 
 # Auth ========================================================================
 db_host <- Sys.getenv("DATABRICKS_HOST")
