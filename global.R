@@ -3,12 +3,14 @@
 library(shiny)
 library(bslib)
 library(shinychat)
+library(shinyjs)
 
 ## LLM
 library(ellmer)
 
 ## API handling
 library(httr2)
+library(jsonlite)
 
 # Auth ========================================================================
 db_host <- Sys.getenv("DATABRICKS_HOST")
@@ -43,6 +45,9 @@ chat <- ellmer::chat_databricks(
   model = "databricks-claude-haiku-4-5",
   token = Sys.getenv("DATABRICKS_TOKEN")
 )
+
+# Google Analytics tag ========================================================
+ga_tag <- "SX10G6W2FM"
 
 # Source R folder =============================================================
 source("R/utils.R")
