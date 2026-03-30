@@ -164,7 +164,7 @@ server <- function(input, output, session) {
 
   observeEvent(input$chat_user_input, {
     # Track guidance question in GA
-    question_text <- shinyjs::runjs(
+    shinyjs::runjs(
       sprintf(
         "gtag('event', 'guidance_question', {'event_category': 'Chat submission', 'event_label': %s});",
         jsonlite::toJSON(input$chat_user_input)
