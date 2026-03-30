@@ -44,5 +44,8 @@ chat <- ellmer::chat_databricks(
   token = Sys.getenv("DATABRICKS_TOKEN")
 )
 
+# Google Analytics tag ========================================================
+ga_tag <- "SX10G6W2FM"
+
 # Source R folder =============================================================
 source("R/utils.R")

@@ -17,6 +17,7 @@ ui <- page_sidebar(
       )
     )
   ),
+  tags$head(includeHTML("google-analytics.html")),
 
   # Logo
   #conditionalPanel(
