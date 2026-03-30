@@ -47,7 +47,7 @@ server <- function(input, output, session) {
                   href = "mailto:cameron.race@education.gov.uk",
                   "cameron.race@education.gov.uk"
                 ),
-                "to help us make this better!"
+                "with the subject line 'Ask Frederick' to help us make this better!"
               ),
               actionButton(
                 "reset_chat",
