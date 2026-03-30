@@ -24,7 +24,7 @@ extends:
     appName: ask-frederick
     environments:
     - name: Staging
-      appId: none
+      appId: 1065
     approvers: |
      cameron.race@education.gov.uk
      laura.selby@education.gov.uk
